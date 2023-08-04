@@ -32,7 +32,6 @@ jobs:
     - name: Setup envitonment
       run: |
         pip install --upgrade pip
-        pip install -r requirements.txt
         playwright install
         xvfb-run npx playwright test
         npm install node-red@3.0.2
