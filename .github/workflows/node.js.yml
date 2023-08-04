@@ -20,7 +20,9 @@ jobs:
       with:
         node-version: '18.x'
     - name: Install dependencies
-      run: npm install playwright
+      run: |
+        npm install playwright
+        npm install -D @playwright/test
     - uses: actions/setup-python@v3
       with:
         python-version: '3.9'
