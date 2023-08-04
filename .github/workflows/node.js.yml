@@ -12,7 +12,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 10
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js
@@ -34,7 +34,7 @@ jobs:
         pip install --upgrade pip
         pip install playwright
         playwright install
-        xvfb-run npx playwright test --ui
+        xvfb-run npx playwright test --ui &
         npm install node-red@3.0.2
         ./node_modules/node-red/bin/node-red-pi &
         sleep 3
