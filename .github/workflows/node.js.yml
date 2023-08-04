@@ -34,7 +34,7 @@ jobs:
         pip install --upgrade pip
         pip install playwright
         playwright install
-        xvfb-run npx playwright test
+        xvfb-run npx playwright test --ui
         npm install node-red@3.0.2
         ./node_modules/node-red/bin/node-red-pi &
         sleep 3
