@@ -24,7 +24,6 @@ jobs:
         ls -la
         npm install
         ls -la node_modules
-      working-directory: functions
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
